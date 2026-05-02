@@ -1,38 +1,122 @@
-# 🚀 Fake News Detection API (Production-Grade)
+# Fake News Detection API
 
-## Overview
-Production-ready ML API for fake news detection using FastAPI, TF-IDF, and Logistic Regression.
+Production-grade NLP system for detecting fake news using deployable machine learning APIs and scalable backend architecture.
 
-## Features
-- Modular clean architecture
-- Logging (JSON structured)
-- Exception handling middleware
-- Request logging middleware
-- Docker & Render ready
+Built using FastAPI, NLP pipelines, and production-ready API design.
 
-## API
-POST /api/v1/predict
+---
 
-Request:
-{
-  "text": "Breaking news..."
-}
+## Problem Statement
 
-Response:
-{
-  "prediction": "Fake",
-  "confidence": 0.92
-}
+Misinformation spreads faster than verification.
 
-## Run Locally
-uvicorn app.main:app --reload
+Organizations need automated systems to detect potentially fake content before distribution.
 
-## Docker
-docker build -t fake-news .
-docker run -p 10000:10000 fake-news
+This platform classifies news content using NLP and machine learning pipelines.
 
-## Deploy (Render)
-Use render.yaml and connect repo
+---
+
+## Key Features
+
+* News Classification API
+* NLP Preprocessing Pipeline
+* Fake News Detection Model
+* Confidence Scoring
+* FastAPI Backend
+* Logging + Error Handling
+* Docker Deployment
+* Production Architecture
+
+---
+
+## Tech Stack
+
+Backend:
+
+* FastAPI
+* Python
+
+ML/NLP:
+
+* Scikit-learn
+* NLP preprocessing
+* Text Classification Models
+
+DevOps:
+
+* Docker
+* GitHub Actions
+
+---
 
 ## Architecture
-Client → FastAPI → Service → Model → Response
+
+Client → FastAPI → NLP Preprocessing → ML Model → Classification Engine
+
+---
+
+## API Endpoint
+
+### POST /predict
+
+Predicts:
+
+* fake / real classification
+* confidence score
+
+---
+
+## Sample Request
+
+````json
+{
+  "text": "Breaking news article content goes here..."
+}
+## Sample Response
+
+```json
+{
+  "prediction": "Fake",
+  "confidence": 0.91
+}
+Performance Metrics
+
+High classification consistency
+
+Low latency inference
+
+Deployable production-ready backend
+
+Scalable API-first architecture
+
+Run Locally
+
+docker build -t fake-news-api .
+docker run -p 8000:8000 fake-news-api
+
+Future Improvements
+
+Transformer-based model upgrade
+
+Fact-checking API integration
+
+Source credibility scoring
+
+Multilingual fake news detection
+
+Admin moderation dashboard
+
+Why This Project Matters
+
+This project demonstrates:
+
+NLP engineering capability
+
+production API development
+
+deployable ML systems
+
+real-world problem solving
+
+Much stronger than basic ML classification notebooks.
+````
